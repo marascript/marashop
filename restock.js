@@ -29,7 +29,7 @@ function updateTimeDisplay() {
     const minutes = addZero(d.getMinutes(), 2);
     const seconds = addZero(d.getSeconds(), 2);
     const timestring = `${hours}:${minutes}:${seconds}`;
-    document.getElementById('time').textContent = timestring;
+    document.getElementById('time').textContent = `${timestring} MST`;
 }
 
 function updateTableDisplays() {
