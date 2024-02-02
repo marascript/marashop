@@ -68,6 +68,7 @@ header {
 
 .shop:hover {
     border: solid 2px black;
+    /* box-shadow: 0 2px 5px rgba(0,0,0,.2); */
 }
 
 header h1 {
@@ -121,4 +122,19 @@ nav {
 #currencies h4 {
     margin-bottom: 0;
     margin-top: 0;
+}
+
+details {
+    cursor: pointer;
+    text-align: left;
+    border-radius: 8px;
+    background-color: #e8e8e8;
+    margin-bottom: 10px;
+    padding: .5em;
+}
+
+details p {
+    border-radius: 10px;
+    background-color: white;
+    padding: 1em;
 }
