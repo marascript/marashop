@@ -79,3 +79,45 @@ function getGradient(color1, color2, percent) {
     return `#${newrgb.map(c => c.toString(16).padStart(2, '0')).join('')}`;
 }
 
+const dukkaToggle = document.getElementById("dukka")
+dukkaToggle.addEventListener("change", () => {
+    toggleShops(dukkaToggle, ".dukka")
+})
+
+const rpToggle = document.getElementById("rp")
+rpToggle.addEventListener("change", () => {
+    toggleShops(rpToggle, ".rp")
+})
+
+const bpToggle = document.getElementById("bp")
+bpToggle.addEventListener("change", () => {
+    toggleShops(bpToggle, ".bp")
+})
+
+const olyptsToggle = document.getElementById("olypts")
+olyptsToggle.addEventListener("change", () => {
+    toggleShops(olyptsToggle, ".olypts")
+})
+
+const scoreptsToggle = document.getElementById("scorepts")
+scoreptsToggle.addEventListener("change", () => {
+    toggleShops(scoreptsToggle, ".scorepts")
+})
+
+function toggleShops(toggleSelector, currencySelector) {
+    const shops = document.querySelectorAll(currencySelector)
+    const showOrHide = toggleSelector.checked ? "none" : "flex"
+
+    for (let shop of shops) {
+        shop.style.display = showOrHide
+    }
+}
+
+// Temporary monkey patch. Reset checkboxes on reload.
+// TODO: Save settings in localStorage
+dukkaToggle.checked = false
+rpToggle.checked = false
+olyptsToggle.checked = false
+scoreptsToggle.checked = false
+bpToggle.checked = false
+rpToggle.checked = false

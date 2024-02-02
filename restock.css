@@ -1,25 +1,27 @@
 html {
     background-color: #468155;
 }
-* {  box-sizing: border-box;}
-body{
-    
-    font-family:'Arial';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial';
     margin-top: 0;
     text-align: center;
     margin-left: 0;
     margin-right: 0;
-    
 }
 
-a {
+.shop {
     border: 1px solid #eeeeee;
     padding: 5px;
     margin: 5px;
-    flex: auto;    
+    flex: auto;
     flex-grow: 0;
-    text-decoration:none;
-    color:black;
+    text-decoration: none;
+    color: black;
     vertical-align: middle;
     font-size: 12px;
     flex-direction: column;
@@ -29,7 +31,7 @@ a {
     background-color: white;
     height: 65px;
     justify-content: center;
-    border:2px solid #E8E8E8;
+    border: 2px solid #E8E8E8;
 }
 
 .shops {
@@ -64,27 +66,60 @@ header {
     margin-top: 0;
 }
 
-a:hover {
+.shop:hover {
     border: solid 2px black;
 }
 
-/* a:hover span {
-    display: block;
+header h1 {
+    margin-top: 0;
 }
 
-a:hover img {
-    display: none;
-} */
+.shops h1 {
+    margin: 6px;
+}
 
-header h1 {margin-top: 0;}
-
-.shops h1 {margin: 6px;}
-
-a img {
+.shop img {
     object-fit: contain;
     height: 60px;
 }
 
 a span {
     display: none;
+}
+
+
+/* .dukka {
+    border: solid thin #6a422a;
+} */
+
+.news {
+    display: flex;
+    padding: 10px;
+    background-color: #ffff;
+    border-radius: 8px;
+    width: 80vw;
+    margin: 0 auto 1em auto;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    background-color: white;
+    
+}
+
+#currencies {
+    background-color: #f9f9fa;
+    border-radius: 8px;
+    width: 80vw;
+    margin: 0 auto 1em auto;
+    padding-top: 5px;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    text-align: left;
+}
+
+#currencies h4 {
+    margin-bottom: 0;
+    margin-top: 0;
 }
