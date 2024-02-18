@@ -22,6 +22,18 @@ shopLinks.forEach((link) => {
     });
 });
 
+const currencyToggles = document.querySelectorAll("#currencies input");
+currencyToggles.forEach((currency) => {
+    currency.addEventListener("change", () => {
+        const shops = document.querySelectorAll(`.${currency.id}`)
+        const showOrHide = currency.checked ? "none" : "flex"
+                
+        for (let shop of shops) {
+            shop.style.display = showOrHide
+        }
+    })
+})
+
 function updateTimeDisplay() {
     const d = new Date();
     const addZero = (x, n) => x.toString().padStart(n, '0')
@@ -78,50 +90,3 @@ function getGradient(color1, color2, percent) {
     const newrgb = rgb1.map((c1, i) => Math.floor((1 - percent) * c1 + percent * rgb2[i]));
     return `#${newrgb.map(c => c.toString(16).padStart(2, '0')).join('')}`;
 }
-
-// TODO: Make a function to reduce duplicate code
-const dukkaToggle = document.getElementById("dukka")
-dukkaToggle.addEventListener("change", () => {
-    toggleShops(dukkaToggle, ".dukka")
-    localStorage.setItem("dukka", dukkaToggle.checked)
-})
-
-const rpToggle = document.getElementById("rp")
-rpToggle.addEventListener("change", () => {
-    toggleShops(rpToggle, ".rp")
-    localStorage.setItem("rp", rpToggle.checked)
-})
-
-const bpToggle = document.getElementById("bp")
-bpToggle.addEventListener("change", () => {
-    toggleShops(bpToggle, ".bp")
-    localStorage.setItem("bp", bpToggle.checked)
-})
-
-const olyptsToggle = document.getElementById("olypts")
-olyptsToggle.addEventListener("change", () => {
-    toggleShops(olyptsToggle, ".olypts")
-    localStorage.setItem("olypts", olyptsToggle.checked)
-})
-
-const scoreptsToggle = document.getElementById("scorepts")
-scoreptsToggle.addEventListener("change", () => {
-    toggleShops(scoreptsToggle, ".scorepts")
-    localStorage.setItem("scorepts", scoreptsToggle.checked)
-})
-
-function toggleShops(toggleSelector, currencySelector) {
-    const shops = document.querySelectorAll(currencySelector)
-    const showOrHide = toggleSelector.checked ? "none" : "flex"
-
-    for (let shop of shops) {
-        shop.style.display = showOrHide
-    }
-}
-
-dukkaToggle.checked = localStorage.getItem("dukka", false)
-rpToggle.checked = localStorage.getItem("rp", false)
-olyptsToggle.checked = localStorage.getItem("olypts", false)
-scoreptsToggle.checked = localStorage.getItem("scorepts", false)
-bpToggle.checked = localStorage.getItem("bp", false)
-rpToggle.checked = localStorage.getItem("rp", false)
