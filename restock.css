@@ -93,7 +93,7 @@ a span {
     border: solid thin #6a422a;
 } */
 
-.news {
+#news {
     display: flex;
     padding: 10px;
     background-color: #ffff;

@@ -14,6 +14,13 @@ function beginClock() {
     }, 1000);
 }
 
+const news = document.getElementById("news")
+news.style.display = localStorage.getItem("news", "block")
+news.addEventListener('click', () => {
+    localStorage.setItem("news", "none")
+    news.style.display = "none"
+})
+
 const shopLinks = document.querySelectorAll('.shop');
 shopLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
@@ -25,9 +32,9 @@ shopLinks.forEach((link) => {
 const currencyToggles = document.querySelectorAll("#currencies input");
 currencyToggles.forEach((currency) => {
     currency.addEventListener("change", () => {
-        const shops = document.querySelectorAll(`.${currency.id}`)
         const showOrHide = currency.checked ? "none" : "flex"
-                
+
+        const shops = document.querySelectorAll(`.${currency.id}`) 
         for (let shop of shops) {
             shop.style.display = showOrHide
         }
