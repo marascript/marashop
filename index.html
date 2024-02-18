@@ -14,11 +14,6 @@
     <header>
       <h1 id="time">TIME</h1>
     </header>
-    <!-- <nav>
-      <a class="nav-link" href="https://www.marapets.com/market.php"><img src="img/inventory.png" alt="My inventory">Inventory</a>
-      <a class="nav-link" href="https://www.marapets.com/retire.php"><img src="img/retiring.png" alt="Retiring items">Retiring</a>
-    </nav> -->
-
     <div class="news">
       <img src="img/News.png" alt="Newspaper image.">
       <p>
@@ -27,15 +22,14 @@
         Recommend using two windows, one with the shop tab, and one with this page.
       </p>
     </div>
-
     <main>
       <div id="currencies">
         <h4>Hide special currencies</h4>
-        <input type="checkbox" id="dukka">Dukka</input>
-        <input type="checkbox" id="rp">RP</input>
-        <input type="checkbox" id="bp">BP</input>
-        <input type="checkbox" id="olypts">Olympic Pts</input>
-        <input type="checkbox" id="scorepts">Score Pts</input>
+        <label for="dukka"><input type="checkbox" id="dukka">Dukka</label>
+        <label for="rp"><input type="checkbox" id="rp">RP</label>
+        <label for="bp"><input type="checkbox" id="bp">BP</label>
+        <label for="olypts"><input type="checkbox" id="olypts">Olympic Pts</label>
+        <label for="scorepts"><input type="checkbox" id="scorepts">Score Pts</label>
       </div>
       <section class="shops" id="table0">
         <h1>:x0 :x5</h1>
@@ -57,7 +51,6 @@
           <a class="shop" target="_blank" href="https://www.marapets.com/shop.php?id=61"><img src="img/battery_c_black.png"><span>Batteries</span></a>
         </div>
       </section>
-
       <section class="shops" id="table1">
         <h1>:x1 :x6</h1>
         <div>
@@ -78,7 +71,6 @@
           <a class="shop dukka" target="_blank" href="https://www.marapets.com/shop.php?id=107"><img src="img/charismawand.png"><span>Wands</span></a>
         </div>
       </section>
-
       <section class="shops" id="table2">
         <h1>:x2 :x7</h1>
         <div>
@@ -100,7 +92,6 @@
           <a class="shop" target="_blank" href="https://www.marapets.com/shop.php?id=58"><img src="img/wig_5.gif"><span>Wigs</span></a>
         </div>
       </section>
-
       <section class="shops" id="table3">
         <h1>:x3 :x8</h1>
         <div>
@@ -120,7 +111,6 @@
           <a class="shop rp" target="_blank" href="https://www.marapets.com/shop.php?id=54"><img src="img/rusty_voodoo.gif"><span>Voodoo Dolls</span></a>
         </div>
       </section>
-
       <section class="shops" id="table4">
         <h1>:x4 :x9</h1>
         <div>
@@ -141,46 +131,43 @@
           <a class="shop" target="_blank" href="https://www.marapets.com/shop.php?id=65"><img src="img/trapdoor.png"><span>Traps</span></a>
         </div>
       </section>
+      
       <hr>
+      
       <article>
         <h2>FAQ</h2>
+        
         <details>
           <summary>What do the numbers mean?</summary>
           <p>Shops restock at these times. For example <code>:x2</code> could be <code>12:02</code> or <code>3:02</code>.
         </details>
-    
         <details>
           <summary>Is this allowed?</summary>
           <p>Technically, no. My opinion (allegedly), is that these times are known and that this is just a convenient interface.
           To my knowledge (don't quote me), there is no way to tell if you are clicking a link from here or from Marapets itself.
         </details>
-
         <details>
           <summary>Is my account safe?</summary>
           <p>Yes! This site only opens links to shops which are already available on the website. The source code for the website is <a href="https://github.com/marascript/restock-tool/tree/main">here</a>, if you want to check.
           There are no ads or analytics used on this page either.
         </details>
-        
+
         <details>
           <summary>My settings don't save!</summary>
           <p>I know, working on it.
         </details>
-
         <details>
           <summary>Who are you?!</summary>
           <p>I am a Marapets player, who likes to shop. I am not trying to "game the system", this is readily available on the website itself. All this is, is a more convenient interface that I made for myself.
         </details>
-
         <details>
           <summary>Can I mail/message you on Marapets?</summary>
           <p>No.
         </details>
-
         <details>
           <summary>I have a suggestion/problem!</summary>
           <p>You can submit any issues or suggestions on the projects <a href="https://github.com/marascript/restock-tool/issues" target="_blank">GitHub</a>.
         </details>
-
         <details>
           <summary>I have seen this before...</summary>
           <p>Yes, you have. This is based on <a href="http://www.cybrtree.com/marapets/restocks.php" target="_blank">this website</a>, which still is functional. I just like "aesthetics".
